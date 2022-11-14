@@ -1,0 +1,69 @@
+body{
+    overflow-y: hidden;
+}
+
+
+.overlay{
+    top: 100%;
+    background-color: rgba(255, 255, 255, .6);
+  transition: all 1s;
+  opacity: 0;
+
+}
+.img{
+    overflow: hidden;
+}
+
+.img:hover .overlay{
+    top: 0;
+    opacity: 100%;
+
+}
+ a{
+    color: white !important;
+}
+.nav {
+    z-index: 999;
+    width: 16.5rem;
+    left: -136px;
+}
+
+.side li{
+    margin-top: 50rem;
+}
+.nav  i , .cardi , a , .area{
+   cursor: pointer;;
+   text-decoration: none;
+}
+.nav img{
+    width: 3rem;
+    margin-bottom:17rem;
+
+}
+#dnav{
+    background-color: black;
+}
+/* .content{
+height:100rem;
+width: 100rem;
+
+} */
+#search , #Categories , #mealpage , #catdata , #areas ,#ContacUs , #Ingredient{ 
+    display: none;
+}
+
+
+#loading{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+background-color: brown;
+z-index: 1000;
+display: flex;
+}
+
+
+
+

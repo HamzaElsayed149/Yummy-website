@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></head>
+<body class="bg-dark"> 
+
+    <div id="loading" class=" align-items-center justify-content-center">
+        <canvas id="pizza"></canvas>
+    </div>
+<div class="home bg-dark  ">
+    <div class="   position-fixed nav " id="nav" >
+    <div class="vh-100 w py-5 w-50 "id="dnav">
+<div class="navitem ">
+<ul class="list-unstyled  ps-3 text-start position-relative side">
+    <li  >
+        <a   id="searchbtn">search</a>
+    </li>
+    <li >
+        <a  id="Categoriesbtn">Categories</a>
+    </li>
+    <li >
+        <a id="area">Area</a>
+    </li>
+    <li >
+        <a id="Ingredients">Ingredients</a>
+    </li>
+    <li >
+        <a id="Contact">Contact Us</a>
+    </li>
+</ul>
+</div>      
+  </div>     
+        
+        <div class="d-flex flex-column align-items-center py-5  bg-light" >
+                    
+                    <img src="logo.png" alt="" class="">
+                    <i class="fa fa-align-justify fa-times fs-4 d-none buttn" id="close"></i>
+                    <i class="fa fa-align-justify fs-4 d-block buttn" id="open"></i>
+                </div>
+</div>
+    <div class="row m-auto bg-dark" id="">
+     
+        <div class="col-md-12  content ">
+            <div class="container ps-5     bg-dark" id="container">
+                <section id="search"  >
+                    <div class="row my-5">
+<div class="col-md-12">
+    <div class="inputform d-flex " id="put">
+        <input type="search" class="form-control-plaintext text-white border-bottom text-center me-4" placeholder="search by Name" onkeypress="sName(this.value)">
+<input type="search" class="form-control-plaintext text-white border-bottom text-center"placeholder="search by first letter"maxlength="1" onkeypress="sLetter(this.value)">
+    </div>
+</div>
+                    </div>
+              
+                
+                    <div class="row gy-4 " id="Sitem">
+               
+                    
+                    </div>
+                </section>
+              <section id="currentsect" class="">
+                <div class="row gy-4 mt-5" id="current">
+                </div>
+              </section>
+              <section id="catdata" class="">
+                <div class="row gy-4 mt-5" id="cdata">
+                </div>
+              </section>
+                <section id="Categories">
+                    <div class="row gy-5 mt-5" id="catg">
+                    </div>
+                </section>
+             
+                <section id="mealpage">
+                    <div class="row mt-5" id="mainpg">
+                    </div>
+                </section>
+                <section id="areas">
+                    <div class="row  mt-5 gy-4" id="areaD">
+                     
+                        
+                    </div>
+                </section>
+                <section id="areapage">
+                    <div class="row  mt-5 gy-4" id="areaP">
+                     
+                        
+                    </div>
+                </section>
+                <section id="Ingredient">
+                    <div class="row  mt-5 gy-4" id="IngredientsD">
+                     
+                        
+                    </div>
+                </section>
+                <section id="IngredientsPage">
+                    <div class="row  mt-5 gy-4" id="IngredientsP">
+                     
+                        
+                    </div>
+                </section>
+                <section id="ContacUs" class="text-white text-center mt-5">
+                    <h2 class="mb-4">ContacUs</h2>
+                    <div class="row gy-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control  " placeholder="Enter Your Name" id="uName" onkeyup="validation()">
+                                <p class="text-danger d-none" id="namealert">Special Characters and Numbers not allowed</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control in  " placeholder="Enter Your Email" id="uEmail" onkeyup="validation()">
+                                <p class="text-danger d-none" id="emailalert">Enter valid email. *Ex: xxx@yyy.zzz  </p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input  class="form-control  "placeholder="Enter Your phone" id="uPhone" onkeyup="validation()" >
+                                <p class="text-danger d-none" id="phonealert">Enter valid Phone Number </p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input  class="form-control  "placeholder="Enter Your Age" id="uAge" onkeyup="validation()">
+                                <p class="text-danger d-none" id="agealert">Enter valid Age </p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control  "placeholder="Enter your Password" id="uPass" onkeyup="validation()">
+                                <p class="text-danger d-none" id="passalert">Enter valid password *Minimum eight characters, at least one letter and one number:* </p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-group">
+                                <input type="password" class="form-control  "placeholder="ReEnter Password" id="uRPass" onkeyup="validation()">
+                                <p class="text-danger d-none" id="repassalert">Enter valid Repassword  </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger btn-group-sm disabled mb-4" onkeyup="validation()" id="btn">Submit</button>
+                    <p class="text-success d-none" id="Welcome">Welcome</p>
+
+                </section>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="jquery-3.6.1.min.js"></script>
+
+<script src="index.js"></script>
+</body>
+</html>
